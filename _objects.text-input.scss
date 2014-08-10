@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    #TEXT-INPUT
+\*------------------------------------*/
+
+/**
+ * Unify text-like inputs.
+ */
+$text-input-height:             double($inuit-base-spacing-unit) !default;
+$text-input-height--small:      halve($text-input-height) !default;
+$text-input-height--large:      double($text-input-height) !default;
+
+$text-input-padding:            halve($inuit-base-spacing-unit) !default;
+$text-input-padding--small:     halve($text-input-padding) !default;
+$text-input-padding--large:     double($text-input-padding) !default;
+
+$text-input-background:         #fff !default;
+$text-input-text-color:         $inuit-base-text-color !default;
+$text-input-border-width:       1px !default;
+$text-input-border-color:       #ccc !default;
+$text-input-border-style:       solid !default;
+$text-input-border-radius:      0 !default;
+
+$enable-text-input--small:      false !default;
+$enable-text-input--large:      false !default;
+
+
+.text-input,
+%text-input{
+    height: $text-input-height;
+    padding-left: $text-input-padding;
+    padding-right: $text-input-padding;
+    line-height: $text-input-height;
+    background-color: $text-input-background;
+    color: $text-input-text-color;
+
+    @if($text-input-border-width != 0) {
+        border: $text-input-border-width $text-input-border-style $text-input-border-color;
+    }
+    @else {
+        border: 0;
+    }
+
+    @if($text-input-border-radius != 0) {
+        border-radius: $text-input-border-radius;
+    }
+}
+
+
+
+
+
+@if ($enable-text-input--small == true){
+
+    /**
+     * Compressed text inputs.
+     */
+    .text-input--small,
+    %text-input--small{
+        height: $text-input-height--small;
+        padding-left: $text-input-padding--small;
+        padding-right: $text-input-padding--small;
+        line-height: $text-input-height--small;
+    }
+}
+
+
+
+
+
+@if ($enable-text-input--large == true){
+
+    /**
+     * Tall text inputs.
+     */
+    .text-input--large,
+    %text-input--large{
+        height: $text-input-height--large;
+        padding-left: $text-input-padding--large;
+        padding-right: $text-input-padding--large;
+        line-height: $text-input-height--large;
+    }
+}

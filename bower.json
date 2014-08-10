@@ -1,0 +1,19 @@
+{
+  "name": "genesis-text-input",
+  "version": "0.1.0",
+  "authors": [
+    "Dennis Heibuelt <dennis@csshugs.com>"
+  ],
+  "description": "Text inputs",
+  "main": "_objects.text-input.scss",
+  "keywords": [
+    "genesis",
+    "css"
+  ],
+  "license": "Apache",
+  "homepage": "https://github.com/TryGenesis/objects.text-input",
+  "dependencies": {
+    "inuit-defaults": "~0.2.0",
+    "inuit-functions": "~0.2.0"
+  }
+}
