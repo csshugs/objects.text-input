@@ -22,6 +22,7 @@ $text-input-border-radius:      0 !default;
 
 $enable-text-input--small:      false !default;
 $enable-text-input--large:      false !default;
+$enable-textarea:               true !default;
 
 
 .text-input,
@@ -78,5 +79,32 @@ $enable-text-input--large:      false !default;
         padding-left: $text-input-padding--large;
         padding-right: $text-input-padding--large;
         line-height: $text-input-height--large;
+    }
+}
+
+
+
+
+
+@if ($enable-textarea == true){
+
+    /**
+     * Adopt the styles from text-inputs for textarea boxes.
+     */
+    .textarea,
+    %textarea{
+        background-color: $text-input-background;
+        color: $text-input-text-color;
+
+        @if($text-input-border-width != 0) {
+            border: $text-input-border-width $text-input-border-style $text-input-border-color;
+        }
+        @else {
+            border: 0;
+        }
+
+        @if($text-input-border-radius != 0) {
+            border-radius: $text-input-border-radius;
+        }
     }
 }
