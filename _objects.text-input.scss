@@ -5,44 +5,44 @@
 /**
  * Unify text-like inputs.
  */
-$text-input-height:             double($inuit-base-spacing-unit) !default;
-$text-input-height--small:      halve($text-input-height) !default;
-$text-input-height--large:      double($text-input-height) !default;
+$inuit-text-input-height:             double($inuit-base-spacing-unit) !default;
+$inuit-text-input-height--small:      halve($inuit-text-input-height) !default;
+$inuit-text-input-height--large:      double($inuit-text-input-height) !default;
 
-$text-input-padding:            halve($inuit-base-spacing-unit) !default;
-$text-input-padding--small:     halve($text-input-padding) !default;
-$text-input-padding--large:     double($text-input-padding) !default;
+$inuit-text-input-padding:            halve($inuit-base-spacing-unit) !default;
+$inuit-text-input-padding--small:     halve($inuit-text-input-padding) !default;
+$inuit-text-input-padding--large:     double($inuit-text-input-padding) !default;
 
-$text-input-background:         #fff !default;
-$text-input-text-color:         $inuit-base-text-color !default;
-$text-input-border-width:       1px !default;
-$text-input-border-color:       #ccc !default;
-$text-input-border-style:       solid !default;
-$text-input-border-radius:      0 !default;
+$inuit-text-input-background:         #fff !default;
+$inuit-text-input-text-color:         $inuit-base-text-color !default;
+$inuit-text-input-border-width:       1px !default;
+$inuit-text-input-border-color:       #ccc !default;
+$inuit-text-input-border-style:       solid !default;
+$inuit-text-input-border-radius:      0 !default;
 
-$enable-text-input--small:      false !default;
-$enable-text-input--large:      false !default;
-$enable-textarea:               true !default;
+$inuit-enable-text-input--small:      false !default;
+$inuit-enable-text-input--large:      false !default;
+$inuit-enable-textarea:               true !default;
 
 
 .text-input,
 %text-input{
-    height: $text-input-height;
-    padding-left: $text-input-padding;
-    padding-right: $text-input-padding;
-    line-height: $text-input-height;
-    background-color: $text-input-background;
-    color: $text-input-text-color;
+    height: $inuit-text-input-height;
+    padding-left: $inuit-text-input-padding;
+    padding-right: $inuit-text-input-padding;
+    line-height: $inuit-text-input-height;
+    background-color: $inuit-text-input-background;
+    color: $inuit-text-input-text-color;
 
-    @if($text-input-border-width != 0) {
-        border: $text-input-border-width $text-input-border-style $text-input-border-color;
+    @if($inuit-text-input-border-width != 0) {
+        border: $inuit-text-input-border-width $inuit-text-input-border-style $inuit-text-input-border-color;
     }
     @else {
         border: 0;
     }
 
-    @if($text-input-border-radius != 0) {
-        border-radius: $text-input-border-radius;
+    @if($inuit-text-input-border-radius != 0) {
+        border-radius: $inuit-text-input-border-radius;
     }
 }
 
@@ -50,17 +50,17 @@ $enable-textarea:               true !default;
 
 
 
-@if ($enable-text-input--small == true){
+@if ($inuit-enable-text-input--small == true){
 
     /**
      * Compressed text inputs.
      */
     .text-input--small,
     %text-input--small{
-        height: $text-input-height--small;
-        padding-left: $text-input-padding--small;
-        padding-right: $text-input-padding--small;
-        line-height: $text-input-height--small;
+        height: $inuit-text-input-height--small;
+        padding-left: $inuit-text-input-padding--small;
+        padding-right: $inuit-text-input-padding--small;
+        line-height: $inuit-text-input-height--small;
     }
 }
 
@@ -68,17 +68,17 @@ $enable-textarea:               true !default;
 
 
 
-@if ($enable-text-input--large == true){
+@if ($inuit-enable-text-input--large == true){
 
     /**
      * Tall text inputs.
      */
     .text-input--large,
     %text-input--large{
-        height: $text-input-height--large;
-        padding-left: $text-input-padding--large;
-        padding-right: $text-input-padding--large;
-        line-height: $text-input-height--large;
+        height: $inuit-text-input-height--large;
+        padding-left: $inuit-text-input-padding--large;
+        padding-right: $inuit-text-input-padding--large;
+        line-height: $inuit-text-input-height--large;
     }
 }
 
@@ -86,25 +86,25 @@ $enable-textarea:               true !default;
 
 
 
-@if ($enable-textarea == true){
+@if ($inuit-enable-textarea == true){
 
     /**
      * Adopt the styles from text-inputs for textarea boxes.
      */
     .textarea,
     %textarea{
-        background-color: $text-input-background;
-        color: $text-input-text-color;
+        background-color: $inuit-text-input-background;
+        color: $inuit-text-input-text-color;
 
-        @if($text-input-border-width != 0) {
-            border: $text-input-border-width $text-input-border-style $text-input-border-color;
+        @if($inuit-text-input-border-width != 0) {
+            border: $inuit-text-input-border-width $inuit-text-input-border-style $inuit-text-input-border-color;
         }
         @else {
             border: 0;
         }
 
-        @if($text-input-border-radius != 0) {
-            border-radius: $text-input-border-radius;
+        @if($inuit-text-input-border-radius != 0) {
+            border-radius: $inuit-text-input-border-radius;
         }
     }
 }
