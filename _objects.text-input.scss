@@ -32,7 +32,7 @@ $inuit-enable-textarea:                 false !default;
 
 
 
-.text-input {
+.#{$inuit-text-input-namespace}o-text-input {
     height: $inuit-text-input-height;
     padding-left: $inuit-text-input-padding;
     padding-right: $inuit-text-input-padding;
@@ -62,7 +62,7 @@ $inuit-enable-textarea:                 false !default;
     /**
      * Compressed text inputs.
      */
-    .text-input--small {
+    .#{$inuit-text-input-namespace}o-text-input--small {
         height: $inuit-text-input-height--small;
         padding-left: $inuit-text-input-padding--small;
         padding-right: $inuit-text-input-padding--small;
@@ -80,7 +80,7 @@ $inuit-enable-textarea:                 false !default;
     /**
      * Tall text inputs.
      */
-    .text-input--large {
+    .#{$inuit-text-input-namespace}o-text-input--large {
         height: $inuit-text-input-height--large;
         padding-left: $inuit-text-input-padding--large;
         padding-right: $inuit-text-input-padding--large;
@@ -98,7 +98,7 @@ $inuit-enable-textarea:                 false !default;
     /**
      * Adopt the styles from text-inputs for textarea boxes.
      */
-    .textarea {
+    .#{$inuit-text-input-namespace}o-textarea {
         background-color: $inuit-text-input-background;
         color: $inuit-text-input-text-color;
 
@@ -112,6 +112,7 @@ $inuit-enable-textarea:                 false !default;
         @if($inuit-text-input-border-radius != 0) {
             border-radius: $inuit-text-input-border-radius;
         }
+
     }
 
 }
