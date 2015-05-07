@@ -29,6 +29,9 @@ $inuit-enable-text-input--large:        false !default;
 $inuit-enable-textarea:                 false !default;
 
 
+
+
+
 .text-input {
     height: $inuit-text-input-height;
     padding-left: $inuit-text-input-padding;
@@ -47,6 +50,7 @@ $inuit-enable-textarea:                 false !default;
     @if($inuit-text-input-border-radius != 0) {
         border-radius: $inuit-text-input-border-radius;
     }
+
 }
 
 
@@ -64,6 +68,7 @@ $inuit-enable-textarea:                 false !default;
         padding-right: $inuit-text-input-padding--small;
         line-height: $inuit-text-input-height--small;
     }
+
 }
 
 
@@ -81,6 +86,7 @@ $inuit-enable-textarea:                 false !default;
         padding-right: $inuit-text-input-padding--large;
         line-height: $inuit-text-input-height--large;
     }
+
 }
 
 
@@ -107,4 +113,5 @@ $inuit-enable-textarea:                 false !default;
             border-radius: $inuit-text-input-border-radius;
         }
     }
+
 }
