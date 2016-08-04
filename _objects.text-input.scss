@@ -99,6 +99,8 @@ $inuit-enable-textarea:                 false !default;
      * Adopt the styles from text-inputs for textarea boxes.
      */
     .#{$inuit-text-input-namespace}o-textarea {
+        padding-left: $inuit-text-input-padding;
+        padding-right: $inuit-text-input-padding;
         background-color: $inuit-text-input-background;
         color: $inuit-text-input-text-color;
 
